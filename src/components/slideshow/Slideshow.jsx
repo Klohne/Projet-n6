@@ -14,7 +14,7 @@ function Slideshow(slideImage){
     const prevImage = () => {
         setCurrentIndex((currentIndex - 1 + slideImage.slideImage.length) % slideImage.slideImage.length);
                 if(currentIndex === 0)
-            setCurrentIndex(slideImage.length - 1)
+            setCurrentIndex(slideImage.slideImage.length - 1)
     }
     return (
         <section className='slider'>
