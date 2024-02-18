@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 70px;
+    gap: 139px;
     color: #FF6060;
 
     h1{
@@ -12,11 +12,14 @@
     }
     p{
         margin: 0;
+        font-size: 36px;
+        font-weight: 500;
     }
     a{
         margin-bottom: 70px;
         text-decoration: underline;
         color: black;
+        font-size: 18px;
     }
 
 }
