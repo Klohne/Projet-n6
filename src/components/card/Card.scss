@@ -1,6 +1,7 @@
 .card{
+    aspect-ratio: 1/1;
     position: relative;
-    max-height: 52vh;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.5s ease-in-out;
@@ -26,6 +27,7 @@
     }
     h3{
         z-index: 20;
+        width: 80%;
         position: absolute;
         bottom: 20px;
         left: 20px;
@@ -34,6 +36,16 @@
         font-size: 18px;
         color: white;
     }
+    
+}
+
+@media (max-width: 1280px){
+    .card h3{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1280px){
     h3::after{
         content: '';
         position: absolute;
@@ -46,7 +58,7 @@
         transition: .5s;
         border-radius: 5px;
     }
-    &:hover h3::after{
-        width: 100%;
+    .card:hover h3::after{
+        width: 110%;
     }
 }

@@ -1,4 +1,5 @@
 .banner {
+  aspect-ratio: 16/9;
   border: 1px solid black;
   height: 25vh;
   width: 100%;
@@ -38,9 +39,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 48px;
+  font-size: 2.5vw;
   font-weight: 700;
   z-index: 3;
   text-shadow: 0 0 8px black;
   margin: 0;
+}
+
+@media (max-width: 1280px) {
+  .banner {
+    height: 15vh;
+  }
 }/*# sourceMappingURL=Banner.css.map */
