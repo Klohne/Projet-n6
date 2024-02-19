@@ -1,6 +1,7 @@
 .banner2 {
   border: 1px solid black;
-  height: 25vh;
+  aspect-ratio: 16/9;
+  max-height: 25vh;
   width: 100%;
   overflow: hidden;
   border-radius: 25px;
@@ -30,4 +31,21 @@
   border-radius: 25px;
   -o-object-position: center 55%;
      object-position: center 55%;
+}
+
+@media (max-width: 1280px) {
+  .banner2 {
+    max-height: 22vh;
+  }
+}
+@media (max-width: 700px) {
+  .banner2 {
+    max-height: 18vh;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .banner2 {
+    max-height: 14vh;
+  }
 }/*# sourceMappingURL=Banner2.css.map */

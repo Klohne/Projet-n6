@@ -24,4 +24,20 @@ header .nav-links li {
 header .nav-links a {
   text-decoration: none;
   color: black;
+}
+
+@media (max-width: 700px) {
+  header .nav-links {
+    gap: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 550px) {
+  .kasa-logo {
+    width: 30%;
+  }
+  header .nav-links {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=Header.css.map */

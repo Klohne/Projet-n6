@@ -43,10 +43,38 @@
     text-shadow: 0 0 8px black;
     margin: 0;
 }
-
+@media (max-width: 1500px){
+    .banner p{
+        font-size: 3vw;
+    }
+}
 @media (max-width: 1280px){
     .banner{
         height: 15vh;
     }
+    .banner p{
+        font-size: 2.5vw;
+    }
 }
+@media (max-width: 700px){
+    .banner{
+        margin-bottom: 25px;
+        height: 12vh;
+        border-radius: 10px;
+    }
+    .banner::after{
+        border-radius: 10px;
 
+    }
+    .banner img{
+        border-radius: 10px;
+    }
+    .banner p{
+        font-size: 24px;
+        left: 20px;
+        transform: translate(0, -50%);
+    }
+    .banner .first-span{
+        display: block;
+    }
+}

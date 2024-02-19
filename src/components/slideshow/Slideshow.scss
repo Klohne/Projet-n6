@@ -1,7 +1,8 @@
 .slider {
+    aspect-ratio: 16/9;
     position: relative;
+    max-height: 60vh;
     width: 100%;
-    height: 60vh;
     overflow: hidden;
     border-radius: 25px;
     margin-bottom: 50px;
@@ -49,4 +50,27 @@
     font-size: 20px;
     font-weight: 500;
     text-shadow: 1px 1px 5px #000000;
+}
+
+@media (max-width: 1280px){
+    .slider{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 700px){
+    .slider-arrow{
+        height: 75px;
+        width: 75px;
+    }
+    .slideCount{
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+}
+@media (max-width: 500px){
+    .slider-arrow{
+        height: 45px;
+        width: 45px;
+    }
 }

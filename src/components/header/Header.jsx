@@ -13,7 +13,7 @@ function Header(){
 
     return (
         <header>
-            <img src={logo} alt="Logo de Kasa" />
+            <img src={logo} alt="Logo de Kasa" className='kasa-logo'/>
             <div className='nav-links'>
                 <NavLink
                     to="/"

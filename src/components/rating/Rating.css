@@ -4,4 +4,10 @@
 
 .emptyStar {
   color: #E3E3E3;
+}
+
+@media (max-width: 500px) {
+  .Star {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=Rating.css.map */

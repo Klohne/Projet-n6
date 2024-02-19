@@ -3,10 +3,11 @@
   background-color: #f6f6f6;
   padding: 50px;
   border-radius: 25px;
-  width: 95%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 50px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1280px) {
@@ -19,5 +20,7 @@
   .gallery {
     grid-template-columns: 1fr;
     background-color: #fff;
+    gap: 25px;
+    padding: 0;
   }
 }/*# sourceMappingURL=Gallery.css.map */

@@ -6,7 +6,7 @@ header{
     justify-content: space-between;
     margin-bottom: 50px;
     padding: 0;
-
+    
     .nav-links{
         display: flex;
         flex-direction: row;
@@ -27,10 +27,21 @@ header{
             color: black;
         }
     }
-    
-    
-
 }
 
+@media (max-width: 700px){
+    header .nav-links{
+        gap: 30px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}
 
-
+@media (max-width: 550px){
+    .kasa-logo{
+        width: 30%;
+    }
+    header .nav-links{
+        font-size: 16px;
+    }
+}

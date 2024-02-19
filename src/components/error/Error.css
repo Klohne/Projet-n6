@@ -20,4 +20,32 @@
   text-decoration: underline;
   color: black;
   font-size: 18px;
+}
+
+@media (max-width: 1280px) {
+  .error-wrapper {
+    gap: 90px;
+  }
+  .error-wrapper h1 {
+    font-size: 200px;
+  }
+  .error-wrapper p {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  .error-wrapper {
+    gap: 113px;
+  }
+  .error-wrapper h1 {
+    font-size: 96px;
+  }
+  .error-wrapper p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .error-wrapper a {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=Error.css.map */

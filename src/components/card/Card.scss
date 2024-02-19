@@ -1,7 +1,7 @@
 .card{
     aspect-ratio: 1/1;
     position: relative;
-    height: auto;
+    height: 100%;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.5s ease-in-out;
@@ -42,6 +42,9 @@
 @media (max-width: 1280px){
     .card h3{
         font-size: 16px;
+    }
+    .card:hover img{
+        transform: none;
     }
 }
 

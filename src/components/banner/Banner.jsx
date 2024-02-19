@@ -5,7 +5,7 @@ function Banner(){
     return (
         <div className="banner">
             <img src={banner} alt="Bannière de la page d'accueil" />
-            <p>Chez vous, partout et ailleurs</p>
+            <p><span className='first-span'>Chez vous,</span> <span className="second-span">partout et ailleurs</span></p>
         </div>
     )
 }
