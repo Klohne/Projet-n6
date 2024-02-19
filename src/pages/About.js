@@ -3,6 +3,7 @@ import Banner2 from '../components/banner2/Banner2'
 import '../styles/About.css'
 
 function About(){
+    // Stockage des textes "a-propos" dans un tableau pour les afficher de façon dynamique dans chacun des collapse
     const aboutText = [
         {
             "id": "1",
@@ -29,8 +30,9 @@ function About(){
     return (
         <div className='about'>
             <Banner2 />
-            <main className='about-main'>
-                {aboutText.map(data => {
+            <main className='about-main'> 
+            {/* Mappage des textes "a-propos" et affichage dans chaque Collapse */}
+                {aboutText.map(data => { 
                     return (
                         <div key={data.id} className="about-main-collapse">
                             <Collapse title={data.title} content={data.content} />

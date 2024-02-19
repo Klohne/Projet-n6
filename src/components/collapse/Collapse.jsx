@@ -6,6 +6,7 @@ import './Collapse.css';
 const chevron = <FontAwesomeIcon icon={faChevronUp} size='2x' />;
 
 function Collapse({ title, content }) {
+
     // Animation ondulation au clic
     const [toggle, setToggle] = useState(false);
     const [coords, setCoords] = useState({ x: -1, y: -1 });
@@ -35,6 +36,7 @@ function Collapse({ title, content }) {
                 </div>
             </div>
             <div className={toggle ? 'collapse-content' : 'collapse-content-hidden'}>
+                {/* Vérification que content est un tableau ? Mappage du contenu pour créer un <p> */}
                 {Array.isArray(content) ? content.map((item, index) => {
                     return (
                         <p className='collapse-text' key={index}>{item}</p>

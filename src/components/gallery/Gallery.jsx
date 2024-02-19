@@ -5,6 +5,7 @@ import logements from '../../data/logements'
 function Gallery(){
     return (
         <main className="gallery">
+            {/* Mappage des logements // création des props grâce à id, title, cover */}
             {logements.map(logement => {
                 return (
                     <Card

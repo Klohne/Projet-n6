@@ -4,6 +4,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './Rating.css'
 
 function Rating(ratingString){
+  // Conversion de la string "rating" en entier.
     const ratingValue = parseInt(ratingString.rating) ;
 
     const stars = [];

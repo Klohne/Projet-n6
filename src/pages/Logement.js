@@ -46,7 +46,7 @@ function Logement(){
                         <p>{location}</p>
                         <div className='tags'>
                             {tags.map((tag, index) => (
-                                <span className='tag' key={index}>{tag}</span>
+                                <span className='tag' key={index}>{tag}</span> // Mappage des tags, affichage dans une span
                             ))}
                         </div>
                     </div>
