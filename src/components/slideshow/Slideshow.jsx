@@ -26,7 +26,7 @@ function Slideshow({slideImage}){
                 <>
                     <IoChevronForwardSharp className='slider-arrow slider-arrow-right' onClick={nextImage} />
                     <IoChevronBackSharp className='slider-arrow slider-arrow-left' onClick={prevImage}/>
-                    {document.body.clientWidth > 768 && <p className='slideCount'>{currentIndex + 1} / {slideImage.length}</p>} {/* Affiche l'index */}
+                    <p className='slideCount'>{currentIndex + 1} / {slideImage.length}</p> {/* Affiche l'index */}
                 </>
             } 
         </section>
