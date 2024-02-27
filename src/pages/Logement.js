@@ -10,12 +10,12 @@ import { useEffect, useState } from 'react'
 
 
 function Logement(){
-    const [slideImage, setSlideImage] = useState([]);
+    const [slideImage, setSlideImage] = useState([]); // useState permet de définir l'image actuelle dans le slider.
     const { id } = useParams();
 
-    const logementActuel = logements.find(logement => logement.id === id);
+    const logementActuel = logements.find(logement => logement.id === id); // On cherche dans la BDD un id de logement qui correspond à l'id de l'URL
     useEffect(() => {
-		if (logementActuel) {
+		if (logementActuel) { // Si on l'a trouvé, on appelle setSlideImage qui va venir modifier l'image présentée dans le slider avec les pictures de la BDD
 			setSlideImage(logementActuel.pictures);
 		}
 	}, [id, logementActuel]);
@@ -24,6 +24,7 @@ function Logement(){
 		return <Error />;
 	}
 
+    // stockage des infos de la BDD dans des variables
     const hostname = logementActuel.host.name;
     const hostpicture = logementActuel.host.picture;
 	const description = logementActuel.description;
@@ -37,7 +38,7 @@ function Logement(){
 
     return (
         <div className='logement-wrapper'>
-        <Slideshow slideImage={slideImage} />
+        <Slideshow slideImage={slideImage} /> {/* On affiche le slider en lui donnant comme prop l'image actuelle du slider */}
             <main>
                 <div className='logement-info'>
                     {/* Partie gauche des infos */}
@@ -45,8 +46,8 @@ function Logement(){
                         <h1>{title}</h1>
                         <p>{location}</p>
                         <div className='tags'>
-                            {tags.map((tag, index) => (
-                                <span className='tag' key={index}>{tag}</span> // Mappage des tags, affichage dans une span
+                            {tags.map((tag, index) => ( // Mappage des tags, affichage dans une span chacun
+                                <span className='tag' key={index}>{tag}</span> 
                             ))}
                         </div>
                     </div>
@@ -60,7 +61,7 @@ function Logement(){
                             <img src={hostpicture} alt="Hôte du logement" />
                         </div>
                         <div className='rating'>
-                            <Rating rating={ratingString}/>
+                            <Rating rating={ratingString}/> {/* Affichage de la note en donnant comme prop la string 'rating' de la BDD*/}
                         </div>
                     </div>
                 </div>
@@ -68,7 +69,7 @@ function Logement(){
                 {/* Info Collapse */}
                 <div className='logement-collapse'>
                     <div className='description-collapse'>
-                        <Collapse title={"Description"} content={description}/>
+                        <Collapse title={"Description"} content={description}/> {/* On affiche les collapse avec une prop qui correspond à leur contenu, qui vient de la BDD */}
                     </div>
                     <div className='equipment-collapse'>
                         <Collapse title={"Equipements"} content={equipments}/>

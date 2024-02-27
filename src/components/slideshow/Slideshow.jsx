@@ -7,7 +7,7 @@ function Slideshow({slideImage}){
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const nextImage = () => {
-        setCurrentIndex((currentIndex + 1) % slideImage.length); //Met current index à jour en y ajoutant 1. Modulo pour faire boucler le slider
+        setCurrentIndex((currentIndex + 1) % slideImage.length); //Met current index à jour en y ajoutant 1. Modulo pour faire boucler le slider : Si currentIndex est égal à 3 et qu'il y a 4 images dans le slider, (3 + 1) % 4 équivaut à 0, donc currentIndex = 0
     }
 
     const prevImage = () => {
@@ -16,7 +16,7 @@ function Slideshow({slideImage}){
     return (
         <section className='slider'>
             <div className='slide-container'>
-                <img src={slideImage[currentIndex]} alt={`Slide ${currentIndex}`} />
+                <img src={slideImage[currentIndex]} alt={`Slide ${currentIndex}`} /> {/* Source à partir de l'index */}
             </div>
             {slideImage.length > 1 &&  // Vérifie qu'il y plus d'une image dans le slider
                 <>

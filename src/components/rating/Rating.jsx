@@ -5,7 +5,7 @@ import './Rating.css'
 
 function Rating(ratingString){
   // Conversion de la string "rating" en entier.
-    const ratingValue = parseInt(ratingString.rating) ;
+    const ratingValue = parseInt(ratingString.rating) ; // On transforme la string en entier
 
     const stars = [];
 
