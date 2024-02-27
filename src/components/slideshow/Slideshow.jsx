@@ -7,15 +7,11 @@ function Slideshow({slideImage}){
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const nextImage = () => {
-        setCurrentIndex((currentIndex + 1) % slideImage.length); //Met current index à jour en y ajoutant 1
-                if(currentIndex === slideImage.length - 1) // Si on est sur la dernière image du slider, nous renvoie à la 1ere image
-            setCurrentIndex(0)
+        setCurrentIndex((currentIndex + 1) % slideImage.length); //Met current index à jour en y ajoutant 1. Modulo pour faire boucler le slider
     }
 
     const prevImage = () => {
         setCurrentIndex((currentIndex - 1 + slideImage.length) % slideImage.length);
-                if(currentIndex === 0) // Si on est sur la première image du slider, nous renvoie à la dernière image
-            setCurrentIndex(slideImage.length - 1)
     }
     return (
         <section className='slider'>
