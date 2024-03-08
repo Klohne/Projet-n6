@@ -1,5 +1,6 @@
 {
   "name": "kasa",
+  "homepage": "https://klohne.github.io/projet-n6",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
