@@ -12,7 +12,7 @@ import Logement from './pages/Logement'
 
 function App() {
   return (
-      <BrowserRouter basename='/Kasa'>
+      <BrowserRouter>
           <Header />
           <Routes>
               <Route path="/" element={<Home />} />
